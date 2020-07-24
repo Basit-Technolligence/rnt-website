@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,12 +42,37 @@ const Footer = () => {
 
           <div className="col-md-4 d-flex justify-content-end">
             <ul className="mr-5 footer-links-list">
-              <li>WORK WITH US</li>
-              <li>PRIVACY POLICY</li>
-              <li>TERMS & CONDITIONS</li>
-              <li>CONTACT US</li>
-              <li>GET A QUOTE</li>
-              <li>FAQ</li>
+              <li>
+                <NavLink className="text-decoration-none footer-navlink" to="/">
+                  WORK WITH US
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="text-decoration-none footer-navlink" to="/">
+                  PRIVACY POLICY
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="text-decoration-none footer-navlink" to="/">
+                  TERMS & CONDITIONS
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="text-decoration-none footer-navlink"
+                  to="/contact"
+                >
+                  CONTACT US
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="text-decoration-none footer-navlink"
+                  to="/faq"
+                >
+                  FAQ
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.css";
-import HomeLandingScreen from "../../Components/HomeLandingScreen";
-import Navbar from "../../Components/Navbar";
-import ServiceCard from "../../Components/ServiceCard";
+import HomeHeader from "../../Containers/HomeHeader";
 import ProcedureCard from "../../Components/ProcedureCard";
 import UserHelp from "../../Components/UserHelp";
+import ServiceContainer from "../../Containers/ServiceContainer";
 
 const Home = () => {
   const procedureCardTitle = [
@@ -31,58 +30,8 @@ const Home = () => {
   let i = -1;
   return (
     <>
-      <div className="container-fluid landing-container">
-        <div className="row mb-4">
-          <div className="col-md-10 mx-auto">
-            <Navbar />
-          </div>
-        </div>
-        <div className="row mb-5">
-          <div className="col-md-10 mx-auto">
-            <HomeLandingScreen />
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid service-container pb-5">
-        <div className="row">
-          <div className="col-md-8 mx-auto text-center mt-5">
-            <h1 className="mb-4">Our Services</h1>
-            <h5>
-              Few energy solution providers can match the industry experience,
-              legal skill, technical breadth and business knowledge of
-              Renewables & Technologies.
-            </h5>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8 mx-auto text-center mt-5">
-            <div className="row">
-              <ServiceCard
-                title="Home Automation"
-                detail="The present & future of all home
-appliances"
-                src="home-automation"
-                size="80%"
-              />
-              <ServiceCard
-                title="Solar Solutions"
-                detail="For a greener, brighter tomorrow"
-                src="solar-solution"
-                size="90%"
-                margin="27px"
-              />
-              <ServiceCard
-                title="Security Systems"
-                detail="Provide safety & security for your
-                family"
-                src="security-system"
-                size="70%"
-                margin="10px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <HomeHeader />
+      <ServiceContainer />
       <div className="container-fluid  mb-5  mt-5">
         <div className="row">
           <div className="col-md-10 mx-auto text-center">

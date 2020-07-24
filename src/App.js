@@ -4,12 +4,24 @@ import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Home from "../src/Pages/Home";
 import Footer from "./Components/Footer";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Services from "./Pages/Services";
+import About from "./Pages/About";
+import ContactForm from "./Pages/ContactForm";
+import FAQ from "./Pages/FAQ";
 // import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
   return (
     <>
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/services" component={Services}></Route>
+        <Route exact path="/about" component={About}></Route>
+        <Route exact path="/contact" component={ContactForm}></Route>
+        <Route exact path="/faq" component={FAQ}></Route>
+        <Redirect to="/" />
+      </Switch>
       <Footer />
     </>
   );
