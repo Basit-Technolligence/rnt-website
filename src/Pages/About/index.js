@@ -3,6 +3,7 @@ import "./style.css";
 import Header from "../../Containers/Header";
 import HomeLandingScreen from "../../Components/HomeLandingScreen";
 import ProcedureCard from "../../Components/ProcedureCard";
+import TeamCard from "../../Components/TeamCard";
 
 const About = () => {
   return (
@@ -30,9 +31,41 @@ const About = () => {
                 src="mission"
               />
               <ProcedureCard
+                title="Values"
+                detail="We are SOLUTIONS oriented, AGILE, take risks, think DIFFERENTLY and pave our own way as a leader in the market. We are DISCIPLINED to think hard, plan well, manage carefully and measure our RESULTS so that we can succeed in a highly competitive environment."
+                src="values"
+              />
+              <ProcedureCard
                 title="Vission"
                 detail="To bridge the energy gap in our country and provide our customers cost effective solutions by harnessing energy from clean sources and providing energy efficient solutions."
                 src="vission"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid team-container mb-5  mt-5">
+        <div className="row">
+          <div className="col-md-8 mx-auto text-center mt-5">
+            <h1 className="mb-4">Our Team</h1>
+            <h5>
+              We are very glad to introduce our team. Having such a hardworking
+              and efficient team is always a key for our success.
+            </h5>
+          </div>
+          <div className="col-md-10 mb-5 mt-3 mx-auto text-center">
+            <div className="row justify-content-center">
+              <TeamCard
+                name="Elon Musk"
+                prof="Co-founder"
+                src="elon"
+                bio="I'm working in this field from 4 years. I have developed multiple products including Tesla"
+              />
+              <TeamCard
+                name="Jeff Bezoz"
+                prof="Co-founder"
+                src="jeff"
+                bio="I'm working in this field from 4 years. I have developed multiple products including Amazon"
               />
             </div>
           </div>
