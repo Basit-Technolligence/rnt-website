@@ -9,6 +9,9 @@ import Services from "./Pages/Services";
 import About from "./Pages/About";
 import ContactForm from "./Pages/ContactForm";
 import FAQ from "./Pages/FAQ";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import Terms from "./Pages/Terms";
+import Products from "./Pages/Products";
 // import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
@@ -16,10 +19,13 @@ function App() {
     <>
       <Switch>
         <Route exact path="/" component={Home}></Route>
+        <Route exact path="/products" component={Products}></Route>
         <Route exact path="/services" component={Services}></Route>
         <Route exact path="/about" component={About}></Route>
         <Route exact path="/contact" component={ContactForm}></Route>
         <Route exact path="/faq" component={FAQ}></Route>
+        <Route exact path="/privacy" component={PrivacyPolicy}></Route>
+        <Route exact path="/terms" component={Terms}></Route>
         <Redirect to="/" />
       </Switch>
       <Footer />

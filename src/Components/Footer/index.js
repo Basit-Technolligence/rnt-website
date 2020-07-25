@@ -3,6 +3,9 @@ import "./style.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
+const SubmitForm = (props) => {
+  props.event.preventDefault();
+};
 const Footer = () => {
   return (
     <>
@@ -11,9 +14,15 @@ const Footer = () => {
           <div className=" mt-5 mb-5 col-md-8 text-center mx-auto">
             <h1>Only 2 minutes to switch</h1>
             <h5>& we will take care of everything else</h5>
-            <button type="button" class="btn btn-theme mt-4">
-              GET A QUOTE
-            </button>
+
+            <NavLink
+              className="text-decoration-none footer-navlink"
+              to="/contact"
+            >
+              <button type="button" class="btn btn-theme mt-4">
+                GET A QUOTE
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -24,13 +33,24 @@ const Footer = () => {
               <strong>Subscribe to Renewables & Technologies via Email</strong>
             </h6>
             <div>
-              <form className="mt-3 form-inline">
+              <form
+                className="mt-3 form-inline"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  event.target.email.value = "";
+                  alert(
+                    "Thanks for subscribing us. If your enter valid email, we will keep you UpToDate."
+                  );
+                }}
+              >
                 <div className="form-group mx-sm-3 mb-2">
                   <input
                     type="email"
                     className="form-control"
                     id="inputFooterEmail"
+                    name="email"
                     placeholder="Email Address"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">
@@ -43,17 +63,30 @@ const Footer = () => {
           <div className="col-md-4 d-flex justify-content-end">
             <ul className="mr-5 footer-links-list">
               <li>
-                <NavLink className="text-decoration-none footer-navlink" to="/">
+                <NavLink
+                  className="text-decoration-none footer-navlink"
+                  to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    alert("No post is available now. We will hire soon.");
+                  }}
+                >
                   WORK WITH US
                 </NavLink>
               </li>
               <li>
-                <NavLink className="text-decoration-none footer-navlink" to="/">
+                <NavLink
+                  className="text-decoration-none footer-navlink"
+                  to="/privacy"
+                >
                   PRIVACY POLICY
                 </NavLink>
               </li>
               <li>
-                <NavLink className="text-decoration-none footer-navlink" to="/">
+                <NavLink
+                  className="text-decoration-none footer-navlink"
+                  to="/terms"
+                >
                   TERMS & CONDITIONS
                 </NavLink>
               </li>
@@ -70,7 +103,7 @@ const Footer = () => {
                   className="text-decoration-none footer-navlink"
                   to="/faq"
                 >
-                  FAQ
+                  FAQs
                 </NavLink>
               </li>
             </ul>

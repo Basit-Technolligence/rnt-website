@@ -17,7 +17,18 @@ const ContactForm = () => {
                 hours to help you.
               </h6>
             </div>
-            <form>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                event.target.name.value = "";
+                event.target.email.value = "";
+                event.target.subject.value = "";
+                event.target.message.value = "";
+                alert(
+                  "Thanks for contacting us. We will respond you as soon as possible."
+                );
+              }}
+            >
               <div className="form-row">
                 <div className="form-group col-md-6">
                   <label for="inputName">Name</label>
@@ -25,6 +36,7 @@ const ContactForm = () => {
                     type="text"
                     className="form-control"
                     id="inputName"
+                    name="name"
                     placeholder="Enter your name"
                     required
                   />
@@ -35,6 +47,7 @@ const ContactForm = () => {
                     type="email"
                     className="form-control"
                     id="inputEmail4"
+                    name="email"
                     placeholder="Enter your email"
                     required
                   />
@@ -46,6 +59,7 @@ const ContactForm = () => {
                   type="text"
                   className="form-control"
                   id="inputSubject"
+                  name="subject"
                   placeholder="Message related to "
                   required
                 />
@@ -58,6 +72,7 @@ const ContactForm = () => {
                   required
                   className="form-control"
                   id="inputMessage"
+                  name="message"
                   placeholder="Enter your message"
                 ></textarea>
               </div>

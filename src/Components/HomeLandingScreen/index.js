@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./style.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { NavLink } from "react-router-dom";
 
 const HomeLandingScreen = (props) => {
   useEffect(() => {
@@ -18,9 +19,14 @@ const HomeLandingScreen = (props) => {
             {props.detail}
           </h5>
           <div className="mt-3">
-            <button type="button" class="btn btn-theme">
-              GET A QUOTE
-            </button>
+            <NavLink
+              className="text-decoration-none footer-navlink"
+              to="/contact"
+            >
+              <button type="button" class="btn btn-theme">
+                GET A QUOTE
+              </button>
+            </NavLink>
           </div>
         </div>
         <div className="col-md-6 pt-5 order-md-2 order-lg-2 order-1">
