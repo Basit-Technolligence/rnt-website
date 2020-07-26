@@ -117,13 +117,25 @@ const Footer = () => {
               <div>© Renewables & Technologies</div>
               <ul className="social-icons d-flex ml-auto">
                 <li>
-                  <FaFacebookF color="white" />
+                  <a
+                    href="https://www.facebook.com/Renewables-Technologies-1581338165331224"
+                    target="_blank"
+                  >
+                    <FaFacebookF color="white" />
+                  </a>
                 </li>
                 <li>
-                  <FaInstagram color="white" />
+                  <a
+                    href="https://www.instagram.com/rewewables.n.technologies/"
+                    target="_blank"
+                  >
+                    <FaInstagram color="white" />
+                  </a>
                 </li>
                 <li>
-                  <FaTwitter color="white" />
+                  <a href="#">
+                    <FaTwitter color="white" />
+                  </a>
                 </li>
               </ul>
             </div>
