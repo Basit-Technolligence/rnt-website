@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import Header from "../../Containers/Header";
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div>
       <Header />
@@ -17,18 +20,7 @@ const ContactForm = () => {
                 hours to help you.
               </h6>
             </div>
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                event.target.name.value = "";
-                event.target.email.value = "";
-                event.target.subject.value = "";
-                event.target.message.value = "";
-                alert(
-                  "Thanks for contacting us. We will respond you as soon as possible."
-                );
-              }}
-            >
+            <form action="sendmail.php" method="POST">
               <div className="form-row">
                 <div className="form-group col-md-6">
                   <label for="inputName">Name</label>

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import Header from "../../Containers/Header";
 
 const Terms = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Header />
@@ -33,10 +36,10 @@ const Terms = () => {
                   <th scope="row" rowSpan="2">
                     Option
                   </th>
-                  <td colspan="3">70% Advance Payment</td>
+                  <td colspan="3">75% Advance Payment</td>
                 </tr>
                 <tr>
-                  <td colspan="3">30% After the installation of project</td>
+                  <td colspan="3">25% After the installation of project</td>
                 </tr>
                 <tr>
                   <th>Delivery Time</th>
@@ -57,17 +60,17 @@ const Terms = () => {
                 <tr>
                   <th rowSpan="3">Product Warranty</th>
                   <td>PV SOLAR MODULES</td>
-                  <td>Grade-A, Mono Crystalline – Workmanship</td>
+                  <td>Workmanship</td>
                   <td>10 Years</td>
                 </tr>
                 <tr>
                   <td>PV SOLAR MODULES</td>
-                  <td>Grade-A, Mono Crystalline – Performance</td>
+                  <td>Performance</td>
                   <td>25 Years</td>
                 </tr>
                 <tr>
                   <td>GRID TIED PV INVERTER</td>
-                  <td>10kW GRID TIED PV INVERTER</td>
+                  <td>GRID TIED PV INVERTER</td>
                   <td>5 Years</td>
                 </tr>
                 <tr>

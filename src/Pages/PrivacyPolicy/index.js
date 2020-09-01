@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import Header from "../../Containers/Header";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const questions = [
     "Who is responsible for the data collection on this website?",
     "How do we collect your data?",
@@ -17,7 +20,7 @@ const PrivacyPolicy = () => {
     "The operators of this website take the protection of your personal data very seriously. We treat your personal data as confidential and in accordance with the statutory data protection regulations and this privacy policy.",
     "Our website includes plugins for the social network like Facebook, Twitter, Instagram. These plugins can be recognized by their logo on our site. ",
     "We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.",
-    "If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at qasimjaved93@gmail.com",
+    "If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at info@rntsolar.com",
   ];
   let i = -1;
   return (

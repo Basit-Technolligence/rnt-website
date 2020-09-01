@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import HomeHeader from "../../Containers/HomeHeader";
 import ProcedureCard from "../../Components/ProcedureCard";
@@ -6,6 +6,9 @@ import UserHelp from "../../Components/UserHelp";
 import ServiceContainer from "../../Containers/ServiceContainer";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const procedureCardTitle = [
     "Book an appointment",
     "Arrange a visit",
@@ -14,8 +17,8 @@ const Home = () => {
     "Time to go green!",
   ];
   const procedureCardDetail = [
-    "Book an appointment with the top-rated consultant",
-    "One of our staff members will visit your premises to understand your requirements",
+    "Book an appointment with our top-rated consultant",
+    "Our staff members will visit your premises to understand your requirements",
     "Our staff will run a feasibility analysis on the site as per the requirement you set",
     "After the process, they will communicate the best possible solution",
     "The team will start implementing the changes on the site and install new infrastructure",

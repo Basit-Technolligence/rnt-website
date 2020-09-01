@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import Header from "../../Containers/Header";
 import FaqData from "./faqs.json";
 
 const FAQ = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Header />

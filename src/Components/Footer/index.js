@@ -121,7 +121,7 @@ const Footer = () => {
                     href="https://www.facebook.com/Renewables-Technologies-1581338165331224"
                     target="_blank"
                   >
-                    <FaFacebookF color="white" />
+                    <FaFacebookF className="social-img" color="white" />
                   </a>
                 </li>
                 <li>
@@ -129,12 +129,7 @@ const Footer = () => {
                     href="https://www.instagram.com/rewewables.n.technologies/"
                     target="_blank"
                   >
-                    <FaInstagram color="white" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <FaTwitter color="white" />
+                    <FaInstagram className="social-img" color="white" />
                   </a>
                 </li>
               </ul>

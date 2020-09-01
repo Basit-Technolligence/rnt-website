@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import Header from "../../Containers/Header";
 import HomeLandingScreen from "../../Components/HomeLandingScreen";
@@ -6,6 +6,9 @@ import ProcedureCard from "../../Components/ProcedureCard";
 import TeamCard from "../../Components/TeamCard";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Header />
@@ -55,7 +58,8 @@ const About = () => {
           </div>
           <div className="col-md-10 mb-5 mt-3 mx-auto text-center">
             <div className="row justify-content-center">
-              <TeamCard
+              <h5 className="mt-5">Comming soon</h5>
+              {/* <TeamCard
                 name="Elon Musk"
                 prof="Co-founder"
                 src="elon"
@@ -66,7 +70,7 @@ const About = () => {
                 prof="Co-founder"
                 src="jeff"
                 bio="I'm working in this field from 4 years. I have developed multiple products including Amazon"
-              />
+              /> */}
             </div>
           </div>
         </div>

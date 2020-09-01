@@ -21,6 +21,12 @@
 .social-icons li {
   margin-right: 25px;
 }
+.social-img {
+  transition: 1s;
+}
+.social-icons li :hover .social-img {
+  transform: perspective(600px) rotateY(-180deg);
+}
 .end-container {
   background-color: #1c4f84;
   color: white;
