@@ -12,6 +12,7 @@ import FAQ from "./Pages/FAQ";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import Terms from "./Pages/Terms";
 import Products from "./Pages/Products";
+import GoodWe from './Pages/GoodWe'
 // import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/faq" component={FAQ}></Route>
         <Route exact path="/privacy" component={PrivacyPolicy}></Route>
         <Route exact path="/terms" component={Terms}></Route>
+        <Route exact path="/goodwe" component={GoodWe}></Route>
         <Redirect to="/" />
       </Switch>
       <Footer />
