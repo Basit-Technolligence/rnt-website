@@ -1,0 +1,15 @@
+{
+        "SDT-G2-Series":{
+            "title":"SDT G2 Series",
+            "sub":"4-15KW | Three Phase | 2 MPPT",
+            "detail":"The SDT G2 series of inverter from GoodWe is one of the best options available in the residential & commercial sectors owing to its technical strengths, which make it one of the most productive inverters in the market. Because of its high efficiency of (98.3%), the enhanced oversizing & overloading capabilities and the fact that it does not require a null line for installation, SDT G2 represents an outstanding improvement in the industry.",
+            "h1":"50% DC INPUT OVERSIZING",
+            "h2":"10% AC OUTPUT OVERLOADING",
+            "h3":"BUILT-IN ANTI-REVERSE CURRENT",
+            "h4":"ARC-FAULT CIRCUIT INTERRUPTER",
+            "p1":"",
+            "p2":"",
+            "p3":"In regions where solar power is not allowed to be reverberated to the grid, installers can easily set an export limit through the GoodWe app with one simple-click, as SDT G2 has integrated a built-in anti-reverse current function into the inverter.",
+            "p4":"Safety First! With AFCI, the inverter is able to detect arc fault failure, sending alarms through monitoring systems and breaking the circuit simultaneously. GoodWe does not only deliver efficiency, reliability, but security as well."
+        }
+}

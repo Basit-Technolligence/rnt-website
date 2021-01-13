@@ -9,6 +9,7 @@ export default  ()=>{
     useEffect(() => {
         window.scrollTo(0, 0);
       });
+    
     return(
         <>
             <Header />
@@ -118,7 +119,7 @@ export default  ()=>{
           </div>
         </div>
       </div>
-      {/* <Modal open={false}/> */}
+      <Modal open={true}/>
         </>
     )
 }
