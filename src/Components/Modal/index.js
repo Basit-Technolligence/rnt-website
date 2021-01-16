@@ -34,14 +34,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function Modal(props) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(props.open);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
+//   console.log('prop',props.open)
+//   const [open, setOpen] = React.useState(props.open);
+//   console.log('data',props.data)
+//   const handleClickOpen = () => {
+//     setOpen(true);
+//   };
+//  console.log('open',open)
   const handleClose = () => {
-    setOpen(false);
+    props.closeModal();
   };
 
   return (
@@ -49,67 +50,90 @@ export default function Modal(props) {
       {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Open full-screen dialog
       </Button> */}
-      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+      <Dialog fullScreen open={props.open} onClose={handleClose} TransitionComponent={Transition}>
         <AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" style={{color:'white'}} className={classes.title}>
-            SDT G2 Series
+            {props.data.title}
             </Typography>
             <Typography variant="subtitle2" style={{color:'white'}}>
-            4-15KW | Three Phase | 2 MPPT
+            {props.data.sub}
             </Typography>
           </Toolbar>
         </AppBar>
-        <Typography className={classes.text}>
-        The SDT G2 series of inverter from GoodWe is one of the best options available in the residential & commercial sectors owing to its technical strengths, which make it one of the most productive inverters in the market. Because of its high efficiency of (98.3%), the enhanced oversizing & overloading capabilities and the fact that it does not require a null line for installation, SDT G2 represents an outstanding improvement in the industry.
+        <Typography align="center" className={classes.text}>
+        {props.data.detail}
         </Typography>
         <div className='container mt-2'>
         <div className='row'>
             <div className='col-md-6' >
             <Typography variant="h4" align="center" className="mt-5 mb-3">
-            50%
-            DC INPUT
-            OVERSIZING
+            {props.data.h1}
             </Typography>
             <Typography align="justify">
-            In regions where solar power is not allowed to be reverberated to the grid, installers can easily set an export limit through the GoodWe app with one simple-click, as SDT G2 has integrated a built-in anti-reverse current function into the inverter.
+            {props.data.p1}
             </Typography>
             </div>
             <div className='col-md-6' >
             <Typography variant="h4" align="center" className="mt-5 mb-3">
-            10%
-AC OUTPUT
-OVERLOADING
+            {props.data.h2}
             </Typography>
             <Typography align="justify">
-            In regions where solar power is not allowed to be reverberated to the grid, installers can easily set an export limit through the GoodWe app with one simple-click, as SDT G2 has integrated a built-in anti-reverse current function into the inverter.
+            {props.data.p2}
             </Typography>
             </div>
             </div>
             <div className='row mt-5'>
             <div className='col-md-6' >
             <Typography variant="h4" align="center" className="mb-3">
-            BUILT-IN
-ANTI-REVERSE CURRENT
+            {props.data.h3}
             </Typography>
             <Typography align="justify">
-            In regions where solar power is not allowed to be reverberated to the grid, installers can easily set an export limit through the GoodWe app with one simple-click, as SDT G2 has integrated a built-in anti-reverse current function into the inverter.
+            {props.data.p3}
             </Typography>
             </div>
             <div className='col-md-6'>
             <Typography variant="h4" align="center" className="mb-3">
-            ARC-FAULT
-CIRCUIT INTERRUPTER
+            {props.data.h4}
             </Typography>
             <Typography align="justify">
-            Safety First! With AFCI, the inverter is able to detect arc fault failure, sending alarms through monitoring systems and breaking the circuit simultaneously. GoodWe does not only deliver efficiency, reliability, but security as well.
+            {props.data.p4}
             </Typography>
             </div>
         </div>
         </div>
+        {props.data.features?
+        <div className='container text-center'>
+             <Typography variant="h4" className={classes.text}>
+                 Features
+             </Typography>
+        <div className='row mt-5'>
+            <div className='col-md-4 text-center' >
+                <img style={{padding:'10px',backgroundColor:'#6a9dd3'}} src={require("../../Images/" + props.data.featureIcons.a + ".png")} />
+                <Typography  className={classes.text}>
+            {props.data.features.a}
+            </Typography>
+                </div>
+                <div className='col-md-4 text-center' >
+                <img style={{padding:'10px',backgroundColor:'#6a9dd3'}} src={require("../../Images/" + props.data.featureIcons.b + ".png")} />
+                <Typography  className={classes.text}>
+            {props.data.features.b}
+            </Typography>
+                </div>
+                <div className='col-md-4 text-center' >
+                <img style={{padding:'10px',backgroundColor:'#6a9dd3'}} src={require("../../Images/" + props.data.featureIcons.c + ".png")} />
+                <Typography className={classes.text}>
+            {props.data.features.c}
+            </Typography>
+                </div>
+                
+                </div>
+                
+        </div>:""
+}
       </Dialog>
     </div>
   );

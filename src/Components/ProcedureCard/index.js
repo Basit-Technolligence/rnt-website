@@ -1,12 +1,18 @@
 import React from "react";
 import Modal from "../Modal";
 import "./style.css";
+import data from '../../Pages/GoodWe/data.json'
 
 const ProcedureCard = (props) => {
   const [open, setOpen] = React.useState(false);
+  const [inverterData,setInverterData] = React.useState("SDT-G2-Series")
 
   const handleClickOpen = () => {
-    setOpen(true);
+    props.handleModal(props.style)
+    // setInverterData(props.style)
+    // console.log('data',props.style)
+    // setOpen(true);
+    // console.log(open)
   };
   return (
     <>
@@ -20,7 +26,7 @@ const ProcedureCard = (props) => {
           <strong>{props.title}</strong>
         </h6>
         <p>{props.detail}</p>
-        {props.style?<a href='' onClick={handleClickOpen}>show more</a>:''}
+        {props.style?<h6 onClick={handleClickOpen}><u className="clickable">read more</u></h6>:''}
       </div>
     </>
   );

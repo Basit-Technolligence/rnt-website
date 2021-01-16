@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import ProcedureCard from '../../Components/ProcedureCard';
 import Header from '../../Containers/Header'
-
+import data from './data.json'
 import Modal from "../../Components/Modal";
 
 
@@ -9,7 +9,18 @@ export default  ()=>{
     useEffect(() => {
         window.scrollTo(0, 0);
       });
-    
+      const [inverterData,setInverterData] = React.useState("SDT-G2-Series")
+      const [open,setOpen] = React.useState(false)
+      const openModal = (data)=>{
+          setOpen(true)
+          console.log('data',data)
+          setInverterData(data)
+      }
+      const closeModal = ()=>{
+          setOpen(false)
+      }
+      
+
     return(
         <>
             <Header />
@@ -22,25 +33,29 @@ export default  ()=>{
               title="SDT G2 Series"
               detail="17-25KW | Three Phase | 2 MPPT"
               src="SDT-G2-Roof-Top"
-              style="newStyle"
+              style="SDT-G2-Series"
+              handleModal = {openModal}
               />
                 <ProcedureCard
               title="SMT Series"
               detail="25-36KW | Three Phase | 3 MPPT"
               src="SMT-Series-Roof-Top"
-              style="newStyle"
+              style="SMT-Series"
+              handleModal = {openModal}
               />
                 <ProcedureCard
               title="MT Series"
               detail="50-80KW | Three Phase | 4 MPPT"
               src="MT-Series-Roof-Top"
-              style="newStyle"
+              style="MT-Series"
+              handleModal = {openModal}
               />
                 <ProcedureCard
               title="HT Series"
               detail="100-136KW | Three Phase | up to 12 MPPT"
               src="HT-Series"
-              style="newStyle"
+              style="HT-Series"
+              handleModal = {openModal}
               />
             </div>
           </div>
@@ -53,7 +68,8 @@ export default  ()=>{
               title="SDT G2 Series"
               detail="4-15KW | Three Phase | 2 MPPT"
               src="SDT-G2-Residential"
-              style="newStyle"
+              style="SDT-G2-Series"
+              handleModal = {openModal}
               />
             </div>
           </div>
@@ -66,7 +82,8 @@ export default  ()=>{
               title="HT Series"
               detail="225/250KW | Three Phase | 12 MPPT"
               src="HT-Series"
-              style="newStyle"
+              style="HT-Series"
+              handleModal = {openModal}
               />
             </div>
           </div>
@@ -79,13 +96,15 @@ export default  ()=>{
               title="ET Series"
               detail="Three Phase Storage Inverter | High Voltage Battery"
               src="ET-Series"
-              style="newStyle"
+              style="ET-Series"
+              handleModal = {openModal}
               />
                <ProcedureCard
               title="ESA Series"
               detail="5KW+10.8KWh | All-in-one Single Phase Storage Inverter"
               src="ESA-Series"
-              style="newStyle"
+              style="ESA-Series"
+              handleModal = {openModal}
               />
             </div>
           </div>
@@ -99,27 +118,30 @@ export default  ()=>{
             //   detail="ALL-IN-ONE MONITORING & COMPREHENSIVE VISUALIZATION"
               src="SEMS"
               height='50%'
-              style="newStyle"
+              style="SEMS"
+              handleModal = {openModal}
               />
                <ProcedureCard
               title="Smart Meter"
             //   detail="5KW+10.8KWh | All-in-one Single Phase Storage Inverter"
               src="SMART-METER"
               height='50%'
-              style="newStyle"
+              style="Smart-Meter"
+              handleModal = {openModal}
               />
                <ProcedureCard
               title="WIFI Module"
             //   detail="5KW+10.8KWh | All-in-one Single Phase Storage Inverter"
               src="WIFI-MODULE"
               height='50%'
-              style="newStyle"
+              style="Wifi-Module"
+              handleModal = {openModal}
               />
             </div>
           </div>
         </div>
       </div>
-      <Modal open={true}/>
+      <Modal open={open} data={data[inverterData]} closeModal={closeModal}/>
         </>
     )
 }
