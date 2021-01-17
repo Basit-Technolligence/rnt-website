@@ -13,7 +13,6 @@ export default  ()=>{
       const [open,setOpen] = React.useState(false)
       const openModal = (data)=>{
           setOpen(true)
-          console.log('data',data)
           setInverterData(data)
       }
       const closeModal = ()=>{

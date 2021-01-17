@@ -73,7 +73,7 @@ export default function Modal(props) {
             <Typography variant="h4" align="center" className="mt-5 mb-3">
             {props.data.h1}
             </Typography>
-            <Typography align="justify">
+            <Typography align="center">
             {props.data.p1}
             </Typography>
             </div>
@@ -81,7 +81,7 @@ export default function Modal(props) {
             <Typography variant="h4" align="center" className="mt-5 mb-3">
             {props.data.h2}
             </Typography>
-            <Typography align="justify">
+            <Typography align="center">
             {props.data.p2}
             </Typography>
             </div>
@@ -91,7 +91,7 @@ export default function Modal(props) {
             <Typography variant="h4" align="center" className="mb-3">
             {props.data.h3}
             </Typography>
-            <Typography align="justify">
+            <Typography align="center">
             {props.data.p3}
             </Typography>
             </div>
@@ -99,7 +99,7 @@ export default function Modal(props) {
             <Typography variant="h4" align="center" className="mb-3">
             {props.data.h4}
             </Typography>
-            <Typography align="justify">
+            <Typography align="center">
             {props.data.p4}
             </Typography>
             </div>
